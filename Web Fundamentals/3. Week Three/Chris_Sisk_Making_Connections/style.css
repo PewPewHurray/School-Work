@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px dotted red; */
+}
+
+#navBar{
+    background-color: black;
+    width: 100%;
+    height: 65px;
+    display: block;
+}
+
+h1{
+    color: white;
+}
+
+#mainContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#leftContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profileContents:first-of-type{
+    color: black;
+}
+
+#profile{
+    height: 295px;
+    width: 350px;
+    margin: 26px 13px;
+    border: 3px solid lightgray;
+}
+
+#profile *{
+    margin-left: 10px;
+}
+
+#profileTop{
+    background-color:lightseagreen;
+    margin-left: 0;
+    position: relative;
+    right: 3px;
+    width: 356px;
+    bottom: 3px;
+}
+
+#userImage{
+    height: 80px;
+    position: relative;
+    left: 15px;
+    top: 44px;
+}
+
+.profileContents{
+    position: relative;
+    top: 35px;
+    left: 11px;
+    margin: 5px;
+}
+
+#titles{
+    margin: 15px 0px;
+}
+
+#mapMarkerImage{
+    height: 13px;
+    margin-left: 4px;
+    margin-right: 10px;;
+    top: 0;
+}
+
+#editIconImage{
+    height: 15px;
+    margin-left: 0;
+    position: relative;
+    top: 2px;
+}
+
+#education{
+    border: 3px solid lightgray;
+    width: 350px;
+    height: 130px;
+    margin: 0px 13px;
+}
+
+.educationTop{
+    background-color: black;
+    position: relative;
+    height: 40px;
+    right: 3px;
+    width: 356px;
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.educationTop p{
+    margin-left: 25px;
+}
+
+.educationMain *{
+    margin: 5px 0px 10px 20px;
+}
+
+.educationMain p:first-of-type{
+    color: gray;
+}
+
+#requests{
+    margin: 26px 13px;
+    height: 145px;
+    width: 210px;
+    border: 3px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connectTop{
+    background-color: black;
+    width: 216px;
+    height: 47px;
+    position: relative;
+    bottom: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.topText{
+    color: white;
+}
+
+.count{
+    background-color: gray;
+    border-radius: 50%;
+    border: 5px solid gray;
+    color: black;
+    font-weight: bold;
+}
+
+#requestMain *{
+    margin: 2px;
+    display: flex;
+    align-items:baseline;
+}
+
+#requestsTable{
+    width: 220px;
+    position: relative;
+    right: 13px;
+}
+
+#requestsTable td:nth-child(odd){
+    text-align: right;
+}
+
+.acceptIcon{
+    margin-left: 100px;
+}
+
+.connectionImages{
+    height: 30px;
+    margin: 5px 10px;
+}
+
+.acceptIcon, .declineIcon{
+    height: 25px;
+    margin-left: 5px;
+}
+
+#connections{
+    border: 3px solid lightgray;
+    height: 270px;
+    width: 210px;
+    margin: 0px 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#connections .connectTop{
+    right: 3px;
+}
+
+#connectionsTable{
+    width: 120px;
+    height: 180px;
+}
+
+.viewMore{
+    border: 3px solid lightgray;
+    height: 30px;
+    width: 210px;
+    position: relative;
+    right: 3px;
+    top: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.viewMore a{
+    margin-left: 10px;
+}

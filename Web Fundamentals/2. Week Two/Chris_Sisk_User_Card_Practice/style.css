@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    height: 295px;
+    width: 600px;
+    position: absolute;
+    top: 40px;
+    border: 3px solid lightgray;
+}
+
+#container *{
+    margin-left: 10px;
+}
+
+#top{
+    background-color:lightseagreen;
+    margin-left: 0;
+    position: relative;
+    right: 3px;
+    width: 606px;
+    bottom: 3px;
+}
+
+#userImage{
+    height: 80px;
+    position: relative;
+    left: 15px;
+    top: 44px;
+}
+
+p, h1{
+    position: relative;
+    top: 35px;
+    margin: 5px
+}
+
+#titles{
+    margin: 15px 0px;
+}
+
+#mapMarkerImage{
+    height: 13px;
+    margin-left: 4px;
+    margin-right: 10px;;
+    top: 0;
+}
+
+#settingsIconImage{
+    height: 15px;
+    margin-left: 0;
+    position: relative;
+    top: 2px;
+}

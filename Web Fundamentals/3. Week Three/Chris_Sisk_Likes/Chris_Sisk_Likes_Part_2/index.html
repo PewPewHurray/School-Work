@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Network</h1>
+    </div>
+    <h2>Your Feed</h2>
+    <div id="container">
+        <div id="profile">
+            <img src="assets/icons/user-circle.png" alt="Avatar Picture">
+            <a href="">Add an avatar</a>
+            <p>James Doe</p>
+        </div>
+        <div id="postColumn">
+            <div class="post">
+                <div class="row">
+                    <P>Neil M</P>
+                    <div class="rightRow">
+                        <div class="likeWrapper">
+                            <p id="firstPostLikeCount">9</p>
+                            <p>like(s)</p>
+                        </div>
+                        <input type="button" rel="like" value="Like" class="likeButton" onclick="addLike('#firstPostLikeCount')">
+                    </div>
+                </div>
+                <p>I just set up this new discord bot, let me know what you all think. <a href="">link</a></p>
+            </div>
+            <div class="post">
+                <div class="row">
+                    <P>Nichole K</P>
+                    <div class="rightRow">
+                        <div class="likeWrapper">
+                            <p id="secondPostLikeCount">12</p>
+                            <p>like(s)</p>
+                        </div>
+                        <input type="button" rel="like" value="Like" class="likeButton" onclick="addLike('#secondPostLikeCount')">
+                    </div>
+                </div>
+                <p>Just finished my <a href="">next comic</a>, check it out.</p>
+            </div>
+            <div class="post">
+                <div class="row">
+                    <P>Jim R</P>
+                    <div class="rightRow">
+                        <div class="likeWrapper">
+                            <p id="thirdPostLikeCount">9</p>
+                            <p>like(s)</p>
+                        </div>
+                        <input type="button" rel="like" value="Like" class="likeButton" onclick="addLike('#thirdPostLikeCount')">
+                    </div>
+                </div>
+                <p>I can't stop listening to the <a href="">new album</a>. Who else is liking it?</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

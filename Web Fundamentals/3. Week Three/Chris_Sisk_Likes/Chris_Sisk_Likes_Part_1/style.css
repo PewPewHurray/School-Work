@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    border: 3px solid black;
+    padding: 15px;
+    height: 70px;
+    width: 280px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#row{
+    display: flex;
+    justify-content: space-between;
+}
+
+#row > p{
+    font-size: large;
+}
+
+#rightRow{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+#likeWrapper{
+    display: flex;
+}
+
+#likeWrapper p{
+    margin: 0px 2px;
+}
+
+#likeButton{
+    background-color: gold;
+    width: 42px;
+    height: 25px;
+    box-shadow: 2px 2px;
+    position: relative;
+    bottom: 4px;
+}

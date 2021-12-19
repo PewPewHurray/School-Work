@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		#ocean {
+			width: 900px;
+			height: 700px;
+		}
+		.player {
+			position: absolute;
+			width: 70px;
+			height: 75px;
+		}
+		.enemies {
+			position: absolute;
+			width: 70px;
+			height: 75px;
+		}
+	</style>
+
+		<div id="ocean">
+			<div id="players"></div>
+			<div id="enemies"></div>	
+		</div>
+
+	<script type="text/javascript">
+		
+		function drawBackground(){
+			document.getElementById("ocean").style.backgroundImage="url('academy-airplane-master/"+background+".jpg')";
+		}
+
+
+		var backgroundArr = ["Artic Ocean", "Moon", "Night Ocean", "ocean", "Tropical Ocean"];
+		var background = backgroundArr[randomBackgroundGenerator()];
+		drawBackground();
+
+        function randomBackgroundGenerator(){
+            var randomnumber=Math.floor(Math.random()*5);
+            return randomnumber;
+        }
+
+		function randomEnemyGenerator(){
+            var randomnumber=Math.floor(Math.random()*7);
+            return randomnumber;
+        }
+
+		var playerImageArr = ["desert player","green player","ice player","pink player","player"];
+		var playerImage = playerImageArr[randomBackgroundGenerator()];
+
+		var player = {
+			left: 400,
+			top: 620,
+			backgroundImage: 'url("academy-airplane-master/'+playerImage+'.png")'
+		}
+
+		var enemyImage = ["blue enemy","desert enemy","enemy","green enemy","pink enemy","stealth enemy","white enemy"];
+
+
+
+		function randomEnemy(){
+			return enemyImage[randomEnemyGenerator()];
+		}
+
+		var enemies = [
+			{left: 150, top: 50, backgroundImage: 'url("academy-airplane-master/'+randomEnemy()+'.png")'},
+			{left: 250, top: 100, backgroundImage: 'url("academy-airplane-master/'+randomEnemy()+'.png")'},
+			{left: 350, top: 150, backgroundImage: 'url("academy-airplane-master/'+randomEnemy()+'.png")'},
+			{left: 450, top: 200, backgroundImage: 'url("academy-airplane-master/'+randomEnemy()+'.png")'},
+			{left: 550, top: 250, backgroundImage: 'url("academy-airplane-master/'+randomEnemy()+'.png")'},
+			{left: 650, top: 300, backgroundImage: 'url("academy-airplane-master/'+randomEnemy()+'.png")'}
+		]
+
+		function drawPlayer(){
+			content = "<div class='player' style='left: "+player.left+"px; top: "+player.top+"px; background-image: "+player.backgroundImage+"'></div>";
+			document.getElementById("players").innerHTML = content;
+		}
+		drawPlayer();
+
+		document.onkeydown = function(e){
+			if (e.keyCode == 37){//Left
+				if (player.left > 0){
+					player.left = player.left - 10;
+				}
+			}
+			if (e.keyCode == 38){//UP
+				if (player.top > 450){
+					player.top = player.top - 10;
+				}
+			}
+			if (e.keyCode == 39){//Right
+				if (player.left < 840){
+					player.left = player.left + 10;
+				}
+			}
+			if (e.keyCode == 40){//Down
+				if (player.top < 630){
+					player.top = player.top + 10;
+				}
+			}
+			console.log(player.top);
+			drawPlayer();
+		}
+
+		function drawEnemies(){
+			content = "";
+			for(var idx=0; idx<enemies.length; idx++){
+				content += "<div class='enemies' style='left: "+enemies[idx].left+"px; top: "+enemies[idx].top+"px; background-image: "+enemies[idx].backgroundImage+"'></div>";
+			}
+			document.getElementById("enemies").innerHTML = content;
+		}
+		drawEnemies();
+	</script>
+</body>
+</html>

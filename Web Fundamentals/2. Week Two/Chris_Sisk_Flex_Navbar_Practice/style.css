@@ -1,0 +1,46 @@
+@font-face{
+    font-family: roboto;
+    src: url(Roboto/Roboto-Regular.ttf)
+}
+*{
+    font-family: roboto;
+    /* border: 1px dotted red; */
+    color: white;
+}
+
+div{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(44, 44, 44);
+}
+
+h1{
+    margin: 10px 0px 10px 20px;
+    font-weight: normal;
+}
+
+ul{
+    display: flex;
+    margin-right: 5px;
+}
+
+li{
+    margin: 0px 15px;
+    list-style-type: none;
+}
+
+a{
+    or: white;
+    text-decoration: none;
+}
+
+button{
+    background-color:cornflowerblue;
+}
+
+.active{
+    /* font-family: roboto;
+    src: url(Roboto/Roboto-Bold.ttf);
+    font-weight: bold; */
+    font-weight:700;
+}

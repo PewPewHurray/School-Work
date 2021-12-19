@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <h1>DojoWeather</h1>
+        <div id="cities">
+            <p class="city" onclick="alert('Loading Weather report')">Burbank</p>
+            <p class="city" onclick="alert('Loading Weather report')">Chicago</p>
+            <p class="city" onclick="alert('Loading Weather report')">Dallas</p>
+        </div>
+    </div>
+    <div id="container">
+        <div id="locationTemp">
+            <h2>San Jose</h2>
+            <div id="tempWrapper">
+                <p>show temperature in</p>
+                <select name="temp" id="chooseTemp" onchange="selectTemp(this, '#todayHigh', '#todayLow', '#tomorrowHigh', '#tomorrowLow', '#fridayHigh', '#fridayLow', '#saturdayHigh', '#saturdayLow')">
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+            </div>
+        </div>
+        <div id="forecast">
+            <div class="daily">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" alt="Rain Image" class="weatherImage">
+                <p>some rain</p>
+                <div class="tempHighLow">
+                    <div class="high">
+                        <p class="highTemp" id="todayHigh">24</p>
+                        <p>°</p>
+                    </div>
+                    <div class="low">
+                        <p class="lowTemp" id="todayLow">18</p>
+                        <p>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="daily">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" alt="Sun Image" class="weatherImage">
+                <p>some sun</p>
+                <div class="tempHighLow">
+                    <div class="high">
+                        <p class="highTemp" id="tomorrowHigh">27</p>
+                        <p>°</p>
+                    </div>
+                    <div class="low">
+                        <p class="lowTemp" id="tomorrowLow">19</p>
+                        <p>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="daily">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" alt="Cloud Image" class="weatherImage">
+                <p>some clouds</p>
+                <div class="tempHighLow">
+                    <div class="high">
+                        <p class="highTemp" id="fridayHigh">21</p>
+                        <p>°</p>
+                    </div>
+                    <div class="low">
+                        <p class="lowTemp" id="fridayLow">16</p>
+                        <p>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="daily">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" alt="Sun Image" class="weatherImage">
+                <p>some sun</p>
+                <div class="tempHighLow">
+                    <div class="high">
+                        <p class="highTemp" id="saturdayHigh">26</p>
+                        <p>°</p>
+                    </div>
+                    <div class="low">
+                        <p class="lowTemp" id="saturdayLow">21</p>
+                        <p>°</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cookies">
+            <img src="assets/cookie.png" alt="Cookie Image">
+            <div id="cookieText">
+                <h4>Stop! Cookie time</h4>
+                <p>We use cookies (asdly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <input type="button" name="cookieAccept" value="I Accept" onclick="acceptCookies('#cookies')">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

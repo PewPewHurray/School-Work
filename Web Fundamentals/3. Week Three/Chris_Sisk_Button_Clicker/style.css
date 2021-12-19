@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body div{
+    margin: 5px;
+}
+
+.wordDefinition, #addDefinition{
+    border: 3px solid black;
+}
+
+#topRow{
+    display: flex;
+    margin-left: 0px;
+}
+
+#topNav{
+    background-color: gray;
+    width: 572px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    display: inline-block;
+    margin: 10px 0px 10px 20px;
+}
+
+#search{
+    border: 2px solid black;
+    width: 230px;
+}
+
+.likeButton{
+    background-color: yellow;
+    height: 30px;
+    width: 90px;
+    box-shadow: 2px 2px 0px 1px;
+    border: 2px solid black;
+    position: relative;
+    top: 10px;
+}
+
+#loginButton{
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 25px;
+    margin: 0px 20px 0px 0px;
+    box-shadow: 3px 3px 0px black;
+    border: 2px solid black;
+}
+
+#addDefinitionButton{
+    background-color: green;
+    width: 160px;
+    height: 30px;
+    box-shadow: 2px 2px 0px 1px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+
+.wordDefinition{
+    display: flex;
+    width: 350px;
+}
+
+.wordDefinition p:nth-of-type(2){
+    display: inline;
+    margin-right: 0px;
+}
+
+.wordDefinition p:nth-of-type(3){
+    margin-left: 0px;
+    display: inline;
+}
+
+.noun{
+    font-weight: bold;
+    height: 15px;
+}
+
+#zen{
+    margin-right: 0px;
+    margin-bottom: 100px;
+}
+
+#addDefinition{
+    /* display: flex; */
+    height: 120px;
+    width: 200px;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#addDefinition p{
+    font-size: x-large;
+    margin: 0px 0px 10px 10px;
+    margin: 10px;
+}
+
+.wordDefinition *{
+    margin: 5px;
+}
+
+.definition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+.word{
+    height: 145px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.word h2{
+    font-size: xx-large;
+    margin: 0px;
+    height: 35px;
+}
