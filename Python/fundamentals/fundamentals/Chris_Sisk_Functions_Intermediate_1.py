@@ -1,4 +1,3 @@
-'''
 #1
 x = [ [5,2,3], [10,8,9] ] 
 students = [
@@ -65,7 +64,7 @@ def iterateDictionary2(key_name, Some_list):
 
 iterateDictionary2('first_name',students)
 iterateDictionary2('last_name',students)
-'''
+
 
 #4
 def printInfo(some_dict):
