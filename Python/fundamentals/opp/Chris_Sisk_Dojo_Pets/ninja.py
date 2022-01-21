@@ -17,7 +17,7 @@ class Ninja:
     def bathe(self):
         self.pet.noise()
 
-ninja_one = Ninja("Chris", "Sisk", pet.Dog, {"name": "Rajah", "type": "Golder Retriever", "tricks": ["Lay Down", "Sit", "Stay"]}, "Hydrolized Treats", "Hydrolized Food")
+ninja_one = Ninja("Chris", "Sisk", pet.Dog, {"name": "Rajah", "type": "Golder Retriever", "tricks": ["Lay Down", "Sit", "Stay"], "sound": "Bark"}, "Hydrolized Treats", "Hydrolized Food")
 
 print(f"Hi, my name is {ninja_one.first_name} {ninja_one.last_name}. I have {ninja_one.treats} and {ninja_one.pet_food} for my pet.")
 print(f"My pet's name is {ninja_one.pet.name}, she is a {ninja_one.pet.type} and she can do tricks like {ninja_one.pet.tricks[0]}, {ninja_one.pet.tricks[1]}, and {ninja_one.pet.tricks[2]}.")

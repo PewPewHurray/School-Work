@@ -4,8 +4,9 @@ class Pet:
         self.name = data['name']
         self.type = data['type']
         self.tricks = data['tricks']
-        self.health = 0
-        self.energy = 0
+        self.health = 100
+        self.energy = 50
+        self.sound = data["sound"]
 
     def sleep(self):
         self.energy += 25
@@ -24,7 +25,7 @@ class Pet:
         return self
     
     def noise(self):
-        print("Bark", "Bark", "Bark")
+        print(self.sound, self.sound, self.sound)
 
 
 class Dog(Pet):
