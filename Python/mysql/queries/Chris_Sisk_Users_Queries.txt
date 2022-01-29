@@ -1,0 +1,21 @@
+USE users_schema;
+
+INSERT INTO users (first_name, last_name, email) VALUES ("Chris", "Sisk", "dogsrule_2003@yahoo.com");
+INSERT INTO users (first_name, last_name, email) VALUES ("John", "Smith", "JohnSmith@smiths.com");
+INSERT INTO users (first_name, last_name, email) VALUES ("Jane", "Doe", "JaneDoe@Does.com");
+
+SELECT * FROM users;
+
+SELECT * FROM users WHERE email = "dogsrule_2003@yahoo.com";
+
+SELECT * FROM users WHERE id = 3;
+
+UPDATE users SET last_name = "Pancakes" WHERE id = 3;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM users WHERE id = 2;
+
+SELECT * FROM users ORDER BY first_name;
+
+SELECT * FROM users ORDER BY first_name DESC;
