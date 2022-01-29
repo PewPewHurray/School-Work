@@ -1,0 +1,11 @@
+USE users_schema;
+
+INSERT INTO users (first_name, last_name, email) VALUES ("Chris", "SIsk", "dogsruel_2003@yahoo.com");
+
+SELECT * FROM users;
+
+UPDATE users SET first_name = "John", last_name = "Smith" WHERE id = 1;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM users WHERE id = 1;
