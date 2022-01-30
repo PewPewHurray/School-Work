@@ -1,0 +1,33 @@
+USE dojos_and_ninjas_schema;
+
+INSERT INTO dojos (name) VALUES ("Coding Dojo");
+INSERT INTO dojos (name) VALUES ("Chris's Dojo");
+INSERT INTO dojos (name) VALUES ("Smith's Dojo");
+
+SELECT * FROM dojos;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM dojos;
+
+INSERT INTO dojos (name) VALUES ("Winning Dojo");
+INSERT INTO dojos (name) VALUES ("Tranquillity Dojo");
+INSERT INTO dojos (name) VALUES ("Dojo Dojo");
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Chris", "Sisk", 32, 4);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("John", "Smith", 24, 4);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Jane", "Doe", 18, 4);
+
+SELECT * FROM ninjas;
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Jack", "Frost", 50, 5);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("John", "Snow", 23, 5);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Snow", "White", 19, 5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Harry", "Potter", 15, 6);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Hermione", "Granger", 15, 6);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ("Ronald", "Weasley", 15, 6);
+
+SELECT * FROM ninjas WHERE dojo_id = 4;
+
+SELECT * FROM ninjas WHERE dojo_id = 6;
