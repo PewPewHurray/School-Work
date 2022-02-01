@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: red;
+    text-align: center;
+    background-color: black;
+    margin: 20px;
+    padding: 10px 40px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+.square1, .square2 {
+    width: 80px;
+    height: 80px;
+}
+
+.square1 {
+    background-color: black;
+}
+
+.square2 {
+    background-color: red;
+}
+
+table {
+    border-collapse: collapse;
+}
