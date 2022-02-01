@@ -1,14 +1,21 @@
+#def find_two(lst):
+#    i_count = 1
+#    j_count = 1
+#    for i in lst:
+#        for j in lst:
+#            if (j_count > i_count):
+#                if (i + j == 2020):
+#                    print(i*j)
+#            j_count += 1
+#        i_count += 1
+#        j_count = 1
+
+#Cleaner way
 def find_two(lst):
-    i_count = 1
-    j_count = 1
-    for i in lst:
-        for j in lst:
-            if (j_count > i_count):
-                if (i + j == 2020):
-                    print(i*j)
-            j_count += 1
-        i_count += 1
-        j_count = 1
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            if(lst[i]+lst[j]==2020):
+                print(lst[i]*lst[j])
 
 lst1=[1721, 979, 366, 299, 675, 1456]
 
