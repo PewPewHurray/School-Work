@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="container-lg mx-auto mt-5 position-relative">
+        <div class="container-m">
+            <h2 class="text-decoration-underline">Submitted Info</h2>
+            <div class="container-sm d-flex justify-content-between">
+                <div class="container-s me-2">
+                    <div>
+                        <p>Name:</p>
+                    </div>
+                    <div>
+                        <p>Dojo Location:</p>
+                    </div>
+                    <div>
+                        <p>Favorite Language:</p>
+                    </div>
+                    <div>
+                        <p>Preffered Color:</p>
+                    </div>
+                    <div>
+                        <p>I am Awesome:</p>
+                    </div>
+                    <div>
+                        <p>Comment:</p>
+                    </div>
+                </div>
+                <div class="container-s ms-2">
+                    <div>
+                        <p>{{(session["first_name"],session["last_name"])|join(" ")}}</p>
+                    </div>
+                    <div>
+                        <p>{{session["location"]}}</p>
+                    </div>
+                    <div>
+                        <p>{{session["language"]}}</p>
+                    </div>
+                    <div>
+                        <p>{{session["color"]}}</p>
+                    </div>
+                    <div>
+                        {% if session["awesome"] == True: %}
+                            <p>True</p>
+                        {% else %}
+                            <p>False</p>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <p>{{session["comment"]}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="/">
+            <input class="go_back btn btn-primary position-absolute bottom-0 end-0 m-3" type="submit" name="back" value="Go Back">
+        </form>
+    </div>
+</body>
+
+</html>
