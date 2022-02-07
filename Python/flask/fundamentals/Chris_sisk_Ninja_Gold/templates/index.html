@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body class="bg-secondary text-white">
+    <div class="d-flex flex-column">
+        <div class="header mx-auto">
+            <div class="row">
+                <div class="col-2 mt-2">
+                    <label for="formGroupExampleInput" class="form-label text_shadow">Your Gold:</label>
+                </div>
+                <div class="col-2 mt-2">
+                    <p class="gold bg-light text-dark fw-bold">{{session["total_gold"]}}</p>
+                </div>
+                <div class="col-2 mt-2">
+                    <label for="formGroupExampleInput" class="form-label text_shadow">Moves:</label>
+                </div>
+                <div class="col-2 mt-2">
+                    <p class="gold bg-light text-dark fw-bold">{{session["moves"]}}</p>
+                </div>
+                <div class="col-4">
+                    <form action="/process_money" method="post">
+                        {% if session["game_over"] == True %}
+                            <input type="submit" class="btn btn-danger position-relative start-100" name="restart" value="Restart">
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justifiy-content-evenly d-grid gap-4 mx-auto">
+            <div class="property farm">
+                <h3 class="mx-auto text-light text_shadow">Farm</h3>
+                <p class="mx-auto text-light text_shadow">(earns 10 - 20 golds)</p>
+                <form action="/process_money" method="post" class="d-flex">
+                    <input type="hidden" name="property" value="farm 10 20 False">
+                    <input type="submit" class="mx-auto btn btn-primary {% if session['game_over'] == True: %}disabled{% endif %}" value="Find Gold!">
+                </form>
+            </div>
+            <div class="property cave">
+                <h3 class="mx-auto text-light text_shadow">Cave</h3>
+                <p class="mx-auto text-light text_shadow">(earns 5 - 10 golds)</p>
+                <form action="/process_money" method="post" class="d-flex">
+                    <input type="hidden" name="property" value="cave 5 10 False">
+                    <input type="submit" class="mx-auto btn btn-primary {% if session['game_over'] == True: %}disabled{% endif %}" value="Find Gold!">
+                </form>
+            </div>
+            <div class="property house">
+                <h3 class="mx-auto text-light text_shadow">House</h3>
+                <p class="mx-auto text-light text_shadow">(earns 2 - 5 golds)</p>
+                <form action="/process_money" method="post" class="d-flex">
+                    <input type="hidden" name="property" value="house 2 5 False">
+                    <input type="submit" class="mx-auto btn btn-primary {% if session['game_over'] == True: %}disabled{% endif %}" value="Find Gold!">
+                </form>
+            </div>
+            <div class="property casino">
+                <h3 class="mx-auto text-light text_shadow">Casino</h3>
+                <p class="mx-auto text-light text_shadow">(earns/takes 0 - 50 golds)</p>
+                <form action="/process_money" method="post" class="d-flex">
+                    <input type="hidden" name="property" value="casino 0 50 True">
+                    <input type="submit" class="mx-auto btn btn-primary {% if session['game_over'] == True: %}disabled{% endif %}" value="Find Gold!">
+                </form>
+            </div>
+        </div>
+        <div class="d-flex flex-column mt-3">
+            <div class="mx-auto">
+                <p class="text_shadow ps-2">Activities:</p>
+                <div class="activities bg-light overflow-auto">
+                    {% for x in range(session["moves"]+1, -1, -1): %}
+                        {{session["activities"][x]|safe}}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="d-flex win_lose">
+            {% if session["game_over"] == True: %}
+                <h1 class="fw-bold mx-auto mt-5 text_shadow {{session['color']}}">{{session["win_lose"]}}</h1>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>

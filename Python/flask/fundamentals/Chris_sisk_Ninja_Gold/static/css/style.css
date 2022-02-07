@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.property{
+    border: 1px solid black;
+    width: 220px;
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.activities{
+    border: 1px solid black;
+    width: 950px;
+    height: 150px;
+}
+
+.header{
+    width: 952px;
+    height: 65px;
+    padding: 13px 87px 0px 10px;
+}
+
+.gold{
+    border: 1px solid black;
+    width: 100px;
+    height: 27px;
+    padding-left: 5px;
+}
+
+.farm{
+    background-image: url('../images/farm.jpg');
+    background-size: cover;
+}
+
+.cave{
+    background-image: url('../images/cave.jpg');
+    background-size: cover;
+}
+
+.house{
+    background-image: url('../images/house.jpg');
+    background-size: cover;
+}
+
+.casino{
+    background-image: url('../images/casino.jpg');
+    background-size: cover;
+}
+
+.text_shadow{
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+ul{
+    list-style-type: none;
+}
