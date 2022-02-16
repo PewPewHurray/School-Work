@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    width: 550px;
+    background-color:aquamarine;
+}
+
+.container-s{
+    width: 150px;
+}
+
+.container-sm{
+    width: 320px;
+}
+
+.container-m{
+    width: 400px;
+}
+
+.container-lg{
+    width: 550px;
+    height: 350px;
+    border: 2px solid black;
+    background-color:aquamarine;
+}
+
+textarea{
+    height: 100px;
+}
