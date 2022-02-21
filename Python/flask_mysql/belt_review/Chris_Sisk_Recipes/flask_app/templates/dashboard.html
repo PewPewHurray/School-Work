@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="d-flex justify-content-between p-4 border-bottom border-dark bg-info">
+        <div>
+            <h2 class="d-inline me-3">Welcome {{session.first_name}}!</h2>
+        </div>
+        <div>
+            <a class="fw-bold me-4" href="/recipes/create">Create</a>
+            <a class="fw-bold" href="/logout">Log Out</a>
+        </div>
+    </div>
+    <h4 class="mt-4 ms-5">These are the recipes</h4>
+    <div class="w-75 ms-5 mt-3">
+        <table class="table table-striped border border-dark">
+            <thead>
+                <tr>
+                    <th scope="col" class="border-end border-dark">Name</th>
+                    <th scope="col" class="border-end border-dark">Under 30 Minutes?</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--logic for displaying the recipes-->
+                {% for recipe in recipes %}
+                    <tr scope="row">
+                        <td class="border-end border-bottom-0 border-dark">{{recipe.name}}</td>
+                        {% if recipe.under_30 == 1 %}
+                            <td class="border-end border-bottom-0 border-dark">Yes</td>
+                        {% else %}
+                            <td class="border-end border-bottom-0 border-dark">No</td>
+                        {% endif %}
+                        <!--if statement for if current user is the creator of the recipe-->
+                        {% if recipe.user_id == session.id %}
+                            <td class="border-bottom-0"><a class="me-1" href="/recipes/{{recipe.id}}">View Instructions</a>|<a class="me-1 ms-1" href="/recipes/edit/{{recipe.id}}">Edit</a>|<a  class="ms-1" href="/recipes/delete/{{recipe.id}}">Delete</a></td>
+                        {% else %}
+                            <td class="border-bottom-0"><a class="me-2" href="/recipes/{{recipe.id}}">View Instructions</a></td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
