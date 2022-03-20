@@ -1,0 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.subContents {
+    background-color: #ffd966;
+    height: 250px;
+    width: 138px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 2px solid black;
+    display: inline-block;
+}

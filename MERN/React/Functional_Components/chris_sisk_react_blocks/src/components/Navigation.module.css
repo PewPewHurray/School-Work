@@ -1,0 +1,15 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navBar {
+    background-color: #6fa8dc;
+    display: inline-block;
+    height: 286px;
+    width: 116px;
+    margin-bottom:59px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-right: 10px;
+}
