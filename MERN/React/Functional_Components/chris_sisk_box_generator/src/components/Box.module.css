@@ -1,0 +1,19 @@
+* {
+    margin: 5px;
+}
+
+.box {
+    display: inline-block;
+    background: white;
+    height: 100px;
+    width: 100px;
+}
+
+.error {
+    color: red;
+    display: inline-block;
+}
+
+label {
+    font-weight: bold;
+}
