@@ -1,0 +1,38 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.App {
+  text-align: center;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.checked, li {
+  font-weight: bold;
+}
+
+.tododiv {
+  padding: 10px
+}
+
+input {
+  margin: 5px;
+}
+
+.error {
+  display: inline-block;
+  color: red;
+}
+
+.checkbox {
+  margin: 0px 7px;
+}
+
+.delete {
+  background-color:firebrick;
+  font-weight: bold;
+}
