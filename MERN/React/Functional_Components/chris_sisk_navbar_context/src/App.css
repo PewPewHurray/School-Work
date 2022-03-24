@@ -1,0 +1,29 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar {
+  background-color: darkorchid;
+  text-align: end;
+  padding-right: 30px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  width: auto;
+  height: 75px;
+}
+
+.name {
+  margin-left: 60px;
+}
+
+.nameInput, .name{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.nameInput {
+  border-radius: 10px;
+  background-color:lavender;
+  margin-left: 15px;
+}
